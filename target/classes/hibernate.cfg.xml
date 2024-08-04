@@ -1,0 +1,22 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pizzamania</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+
+        <!-- Specify dialect -->
+<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.logging.level">DEBUG</property>
+        
+        <!-- Mapping annotated classes -->
+        <mapping class="basepackage.model.Pizza"/>
+        <mapping class="basepackage.model.Topping"/>
+        <mapping class="basepackage.model.DeluxePizzas"/>
+        <mapping class="basepackage.model.NonVegPizza"/>
+        <mapping class="basepackage.model.VegPizza"/>
+    </session-factory>
+</hibernate-configuration>
